@@ -42,7 +42,7 @@ namespace Examen_RentaCar_Thomas
 
             lblEncabezado.Text =
                 "Dias".PadRight(6) +
-                "Vehiculos".PadRight(24) +
+                "Vehiculos".PadRight(7) +
                 "Tarifas".PadLeft(10) +
                 "Total".PadLeft(12);
 
@@ -78,7 +78,7 @@ namespace Examen_RentaCar_Thomas
             if (rbtCompleto.Checked)
             {
                 tarifaDiaria += 300;
-                seguro = "Completo";
+                seguro = "FULL";
             }
 
             if (chkGps.Checked)
@@ -98,15 +98,15 @@ namespace Examen_RentaCar_Thomas
 
             string linea =
                 dias.ToString().PadRight(6) +
-                vehiculo.PadRight(24) +
-                tarifaDiaria.ToString("N2").PadLeft(10) +
-                totalLinea.ToString("N2").PadLeft(12);
+                vehiculo.PadRight(15) +
+                tarifaDiaria.ToString("N2").PadLeft(9) +
+                totalLinea.ToString("N2").PadLeft(11);
 
             lstAlquileres.Items.Add(linea);
 
             subtotal += totalLinea;
 
-            textBox1.Text = "RD$ " + subtotal.ToString("N2");
+            lblSubtotal.Text = "RD$ " + subtotal.ToString("N2");
 
             // LIMPIAR VEHICULO
             txtVehiculo.Clear();
@@ -143,11 +143,11 @@ namespace Examen_RentaCar_Thomas
 
             decimal total = baseImponible + itbis;
 
-            textBox1.Text = "RD$ " + subtotal.ToString("N2");
-            textBox2.Text = "RD$ " + descuento.ToString("N2");
-            textBox3.Text = "RD$ " + domicilio.ToString("N2");
-            textBox4.Text = "RD$ " + itbis.ToString("N2");
-            textTotal.Text = "RD$ " + total.ToString("N2");
+            lblSubtotal.Text = "RD$ " + subtotal.ToString("N2");
+            lblDescuento.Text = "RD$ " + descuento.ToString("N2");
+            lblDomicilio.Text = "RD$ " + domicilio.ToString("N2");
+            lblITBIS.Text = "RD$ " + itbis.ToString("N2");
+            lblTotal.Text = "RD$ " + total.ToString("N2");
         }
 
         // NUEVO ALQUILER
@@ -194,11 +194,11 @@ namespace Examen_RentaCar_Thomas
         // MOSTRAR RESULTADOS
         private void MostrarResultados()
         {
-            textBox1.Text = "RD$ 0.00";
-            textBox2.Text = "RD$ 0.00";
-            textBox3.Text = "RD$ 0.00";
-            textBox4.Text = "RD$ 0.00";
-            textTotal.Text = "RD$ 0.00";
+            lblSubtotal.Text = "RD$ 0.00";
+            lblDescuento.Text = "RD$ 0.00";
+            lblDomicilio.Text = "RD$ 0.00";
+            lblITBIS.Text = "RD$ 0.00";
+            lblTotal.Text = "RD$ 0.00";
         }
 
         // EVENTOS DEL DISEÑADOR
@@ -212,6 +212,7 @@ namespace Examen_RentaCar_Thomas
 
         private void label5_Click(object sender, EventArgs e)
         {
+            MostrarResultados();
         }
     }
 }

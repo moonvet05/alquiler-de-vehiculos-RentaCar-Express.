@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lblCliente = new Label();
             textCliente = new TextBox();
             dtpSalida = new DateTimePicker();
@@ -51,17 +52,17 @@
             btnAgregar = new Button();
             lblEncabezado = new Label();
             lstAlquileres = new ListBox();
+            label9 = new Label();
+            label8 = new Label();
+            label00 = new Label();
+            label88 = new Label();
+            label11 = new Label();
+            chkCorporativo = new CheckBox();
             lblSubtotal = new Label();
             lblDescuento = new Label();
             lblDomicilio = new Label();
-            lblitbis = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            lblITBIS = new Label();
             lblTotal = new Label();
-            textTotal = new TextBox();
-            chkCorporativo = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)nudDias).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -69,322 +70,214 @@
             // 
             // lblCliente
             // 
-            lblCliente.AutoSize = true;
-            lblCliente.Location = new Point(12, 18);
+            resources.ApplyResources(lblCliente, "lblCliente");
             lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(69, 25);
-            lblCliente.TabIndex = 0;
-            lblCliente.Text = "Cliente:";
             // 
             // textCliente
             // 
-            textCliente.Location = new Point(87, 18);
+            resources.ApplyResources(textCliente, "textCliente");
             textCliente.Name = "textCliente";
-            textCliente.Size = new Size(262, 31);
-            textCliente.TabIndex = 1;
-            textCliente.TextChanged += this.textCliente_TextChanged;
+            textCliente.TextChanged += textCliente_TextChanged;
             // 
             // dtpSalida
             // 
-            dtpSalida.Location = new Point(81, 100);
+            resources.ApplyResources(dtpSalida, "dtpSalida");
             dtpSalida.Name = "dtpSalida";
-            dtpSalida.Size = new Size(300, 31);
-            dtpSalida.TabIndex = 3;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 100);
+            resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
-            label1.Size = new Size(63, 25);
-            label1.TabIndex = 2;
-            label1.Text = "Salida:";
-            label1.Click += this.label1_Click;
+            label1.Click += label1_Click;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 167);
+            resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
-            label2.Size = new Size(82, 25);
-            label2.TabIndex = 4;
-            label2.Text = "Vehiculo:";
             // 
             // txtVehiculo
             // 
-            txtVehiculo.Location = new Point(100, 167);
+            resources.ApplyResources(txtVehiculo, "txtVehiculo");
             txtVehiculo.Name = "txtVehiculo";
-            txtVehiculo.Size = new Size(262, 31);
-            txtVehiculo.TabIndex = 5;
             // 
             // lblTarifa
             // 
-            lblTarifa.AutoSize = true;
-            lblTarifa.Location = new Point(12, 233);
+            resources.ApplyResources(lblTarifa, "lblTarifa");
             lblTarifa.Name = "lblTarifa";
-            lblTarifa.Size = new Size(53, 25);
-            lblTarifa.TabIndex = 6;
-            lblTarifa.Text = "Tarifa";
             // 
             // textTarifa
             // 
-            textTarifa.Location = new Point(100, 233);
+            resources.ApplyResources(textTarifa, "textTarifa");
             textTarifa.Name = "textTarifa";
-            textTarifa.Size = new Size(262, 31);
-            textTarifa.TabIndex = 7;
             // 
             // lblDias
             // 
-            lblDias.AutoSize = true;
-            lblDias.Location = new Point(12, 285);
+            resources.ApplyResources(lblDias, "lblDias");
             lblDias.Name = "lblDias";
-            lblDias.Size = new Size(50, 25);
-            lblDias.TabIndex = 8;
-            lblDias.Text = "Dias:";
             // 
             // nudDias
             // 
-            nudDias.Location = new Point(100, 285);
+            resources.ApplyResources(nudDias, "nudDias");
             nudDias.Name = "nudDias";
-            nudDias.Size = new Size(180, 31);
-            nudDias.TabIndex = 9;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(rbtCompleto);
             groupBox1.Controls.Add(rbtBasico);
-            groupBox1.Location = new Point(12, 343);
+            resources.ApplyResources(groupBox1, "groupBox1");
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(300, 150);
-            groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Seguros";
             // 
             // rbtCompleto
             // 
-            rbtCompleto.AutoSize = true;
-            rbtCompleto.Location = new Point(6, 93);
+            resources.ApplyResources(rbtCompleto, "rbtCompleto");
             rbtCompleto.Name = "rbtCompleto";
-            rbtCompleto.Size = new Size(202, 29);
-            rbtCompleto.TabIndex = 1;
             rbtCompleto.TabStop = true;
-            rbtCompleto.Text = "Completo(+RD$300)";
             rbtCompleto.UseVisualStyleBackColor = true;
             // 
             // rbtBasico
             // 
-            rbtBasico.AutoSize = true;
-            rbtBasico.Location = new Point(6, 44);
+            resources.ApplyResources(rbtBasico, "rbtBasico");
             rbtBasico.Name = "rbtBasico";
-            rbtBasico.Size = new Size(87, 29);
-            rbtBasico.TabIndex = 0;
             rbtBasico.TabStop = true;
-            rbtBasico.Text = "Basico";
             rbtBasico.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(rbtDomicilio);
             groupBox2.Controls.Add(rbtSucursal);
-            groupBox2.Location = new Point(318, 343);
+            resources.ApplyResources(groupBox2, "groupBox2");
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(300, 150);
-            groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Entrega";
             // 
             // rbtDomicilio
             // 
-            rbtDomicilio.AutoSize = true;
-            rbtDomicilio.Location = new Point(6, 93);
+            resources.ApplyResources(rbtDomicilio, "rbtDomicilio");
             rbtDomicilio.Name = "rbtDomicilio";
-            rbtDomicilio.Size = new Size(188, 29);
-            rbtDomicilio.TabIndex = 3;
             rbtDomicilio.TabStop = true;
-            rbtDomicilio.Text = "Domicilio(+RD500)";
             rbtDomicilio.UseVisualStyleBackColor = true;
             // 
             // rbtSucursal
             // 
-            rbtSucursal.AutoSize = true;
-            rbtSucursal.Location = new Point(6, 44);
+            resources.ApplyResources(rbtSucursal, "rbtSucursal");
             rbtSucursal.Name = "rbtSucursal";
-            rbtSucursal.Size = new Size(124, 29);
-            rbtSucursal.TabIndex = 2;
             rbtSucursal.TabStop = true;
-            rbtSucursal.Text = "En sucursal";
             rbtSucursal.UseVisualStyleBackColor = true;
             // 
             // chkGps
             // 
-            chkGps.AutoSize = true;
-            chkGps.Location = new Point(20, 511);
+            resources.ApplyResources(chkGps, "chkGps");
             chkGps.Name = "chkGps";
-            chkGps.Size = new Size(223, 29);
-            chkGps.TabIndex = 12;
-            chkGps.Text = "GPS (+RD$100 por dia)";
             chkGps.UseVisualStyleBackColor = true;
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(18, 548);
+            resources.ApplyResources(btnCalcular, "btnCalcular");
             btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(169, 44);
-            btnCalcular.TabIndex = 13;
-            btnCalcular.Text = "Calcular total";
             btnCalcular.UseVisualStyleBackColor = true;
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(193, 548);
+            resources.ApplyResources(btnLimpiar, "btnLimpiar");
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(169, 44);
-            btnLimpiar.TabIndex = 14;
-            btnLimpiar.Text = "Nuevo alquiler";
             btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(368, 548);
+            resources.ApplyResources(btnSalir, "btnSalir");
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(132, 44);
-            btnSalir.TabIndex = 15;
-            btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(550, 18);
+            resources.ApplyResources(btnAgregar, "btnAgregar");
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(294, 50);
-            btnAgregar.TabIndex = 16;
-            btnAgregar.Text = "Agrgar al alquiler";
             btnAgregar.UseVisualStyleBackColor = true;
             // 
             // lblEncabezado
             // 
-            lblEncabezado.AutoSize = true;
-            lblEncabezado.Location = new Point(569, 106);
+            resources.ApplyResources(lblEncabezado, "lblEncabezado");
+            lblEncabezado.ForeColor = SystemColors.ControlText;
             lblEncabezado.Name = "lblEncabezado";
-            lblEncabezado.Size = new Size(321, 25);
-            lblEncabezado.TabIndex = 17;
-            lblEncabezado.Text = "Dias    Vehiculos                Tarifas   Total";
-            lblEncabezado.Click += this.label5_Click;
+            lblEncabezado.Click += label5_Click;
             // 
             // lstAlquileres
             // 
             lstAlquileres.FormattingEnabled = true;
-            lstAlquileres.Location = new Point(569, 135);
+            resources.ApplyResources(lstAlquileres, "lstAlquileres");
             lstAlquileres.Name = "lstAlquileres";
-            lstAlquileres.Size = new Size(321, 129);
-            lstAlquileres.TabIndex = 18;
             // 
-            // lblSubtotal
+            // label9
             // 
-            lblSubtotal.AutoSize = true;
-            lblSubtotal.Location = new Point(634, 360);
-            lblSubtotal.Name = "lblSubtotal";
-            lblSubtotal.Size = new Size(79, 25);
-            lblSubtotal.TabIndex = 19;
-            lblSubtotal.Text = "Subtotal";
+            resources.ApplyResources(label9, "label9");
+            label9.Name = "label9";
             // 
-            // lblDescuento
+            // label8
             // 
-            lblDescuento.AutoSize = true;
-            lblDescuento.Location = new Point(634, 403);
-            lblDescuento.Name = "lblDescuento";
-            lblDescuento.Size = new Size(96, 25);
-            lblDescuento.TabIndex = 20;
-            lblDescuento.Text = "Descuento";
+            resources.ApplyResources(label8, "label8");
+            label8.Name = "label8";
             // 
-            // lblDomicilio
+            // label00
             // 
-            lblDomicilio.AutoSize = true;
-            lblDomicilio.Location = new Point(634, 458);
-            lblDomicilio.Name = "lblDomicilio";
-            lblDomicilio.Size = new Size(87, 25);
-            lblDomicilio.TabIndex = 21;
-            lblDomicilio.Text = "Domicilio";
+            resources.ApplyResources(label00, "label00");
+            label00.Name = "label00";
             // 
-            // lblitbis
+            // label88
             // 
-            lblitbis.AutoSize = true;
-            lblitbis.Location = new Point(634, 512);
-            lblitbis.Name = "lblitbis";
-            lblitbis.Size = new Size(45, 25);
-            lblitbis.TabIndex = 22;
-            lblitbis.Text = "itbis";
+            resources.ApplyResources(label88, "label88");
+            label88.Name = "label88";
             // 
-            // textBox1
+            // label11
             // 
-            textBox1.Location = new Point(740, 357);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 23;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(740, 403);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(150, 31);
-            textBox2.TabIndex = 24;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(740, 455);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(150, 31);
-            textBox3.TabIndex = 25;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(740, 512);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(150, 31);
-            textBox4.TabIndex = 26;
-            // 
-            // lblTotal
-            // 
-            lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(634, 567);
-            lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(114, 25);
-            lblTotal.TabIndex = 27;
-            lblTotal.Text = "Total a pagar";
-            // 
-            // textTotal
-            // 
-            textTotal.Location = new Point(754, 567);
-            textTotal.Name = "textTotal";
-            textTotal.Size = new Size(150, 31);
-            textTotal.TabIndex = 28;
+            resources.ApplyResources(label11, "label11");
+            label11.Name = "label11";
             // 
             // chkCorporativo
             // 
-            chkCorporativo.AutoSize = true;
-            chkCorporativo.Location = new Point(20, 60);
+            resources.ApplyResources(chkCorporativo, "chkCorporativo");
             chkCorporativo.Name = "chkCorporativo";
-            chkCorporativo.Size = new Size(188, 29);
-            chkCorporativo.TabIndex = 29;
-            chkCorporativo.Text = "Cliente corporativo";
             chkCorporativo.UseVisualStyleBackColor = true;
+            // 
+            // lblSubtotal
+            // 
+            resources.ApplyResources(lblSubtotal, "lblSubtotal");
+            lblSubtotal.Name = "lblSubtotal";
+            // 
+            // lblDescuento
+            // 
+            resources.ApplyResources(lblDescuento, "lblDescuento");
+            lblDescuento.Name = "lblDescuento";
+            // 
+            // lblDomicilio
+            // 
+            resources.ApplyResources(lblDomicilio, "lblDomicilio");
+            lblDomicilio.Name = "lblDomicilio";
+            // 
+            // lblITBIS
+            // 
+            resources.ApplyResources(lblITBIS, "lblITBIS");
+            lblITBIS.Name = "lblITBIS";
+            // 
+            // lblTotal
+            // 
+            resources.ApplyResources(lblTotal, "lblTotal");
+            lblTotal.Name = "lblTotal";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1058, 619);
-            Controls.Add(chkCorporativo);
-            Controls.Add(textTotal);
             Controls.Add(lblTotal);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(lblitbis);
+            Controls.Add(lblITBIS);
             Controls.Add(lblDomicilio);
             Controls.Add(lblDescuento);
             Controls.Add(lblSubtotal);
+            Controls.Add(chkCorporativo);
+            Controls.Add(label11);
+            Controls.Add(label88);
+            Controls.Add(label00);
+            Controls.Add(label8);
+            Controls.Add(label9);
             Controls.Add(lstAlquileres);
             Controls.Add(lblEncabezado);
             Controls.Add(btnAgregar);
@@ -405,8 +298,7 @@
             Controls.Add(textCliente);
             Controls.Add(lblCliente);
             Name = "Form1";
-            Text = "Form1";
-            Load += this.Form1_Load;
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)nudDias).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -441,16 +333,16 @@
         private Button btnAgregar;
         private Label lblEncabezado;
         private ListBox lstAlquileres;
+        private Label label9;
+        private Label label8;
+        private Label label00;
+        private Label label88;
+        private Label label11;
+        private CheckBox chkCorporativo;
         private Label lblSubtotal;
         private Label lblDescuento;
         private Label lblDomicilio;
-        private Label lblitbis;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private Label lblITBIS;
         private Label lblTotal;
-        private TextBox textTotal;
-        private CheckBox chkCorporativo;
     }
 }
